@@ -10,10 +10,11 @@ const createTimerAnimator = () => {
 
   return (seconds) => {
 
-    if(seconds > 359999){
-      seconds = 359999;
+    const maxSeconds = 359999;
+    if(seconds > maxSeconds){
+      seconds = maxSeconds;
     }
-    
+
     const formatTime = (time) => {
       return String(time).padStart(2, '0');
     };
